@@ -4,9 +4,13 @@
   "description": "\"# say-hello\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "createui": "ng new say-hello-ui"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^21.0.2"
+  }
 }
