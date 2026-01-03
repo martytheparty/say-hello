@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^15.7.1"
+    "cypress": "^15.7.1",
+    "typescript": "5.5"
   }
 }
