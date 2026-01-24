@@ -34,6 +34,15 @@
             ]
           },
           "configurations": {
+            "ilikeemail": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "baseHref": "/say-hello/"
+            },
             "production": {
               "budgets": [
                 {
