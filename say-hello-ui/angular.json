@@ -43,6 +43,11 @@
               "extractLicenses": true,
               "baseHref": "/say-hello/"
             },
+              "github": {
+              "baseHref": "/say-hello/",
+              "optimization": true,
+              "outputHashing": "all"
+            },
             "production": {
               "budgets": [
                 {
