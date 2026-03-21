@@ -1,15 +1,16 @@
 describe('template spec', () => {
   it('passes', () => {
-    const url: string = 'http://localhost:4200/';
-    cy.visit(url);
+    // Use relative URLs so Cypress prepends the baseUrl automatically
+    cy.visit('/');
 
-    // make sure the URL defaults to ${url}/en/us
+    // Cypress will combine baseUrl + path
+    // Expect the app to redirect to /en/us by default
+    cy.url().should('eq', `${Cypress.config('baseUrl')}/en/us`);
 
-    cy.url().should('eq', `${url}en/us`);
+    // Visit another page (relative to baseUrl)
+    cy.visit('/data/entities');
 
-    // this is technically legal... 
-    cy.visit(`${url}data/entities`);
-    // Not sure what we want to do with invalid language/region combinations
-
-  })
-})
+    // TODO: decide what to do with invalid language/region combinations
+    // e.g., you could check for a 404 page, default redirect, or error message
+  });
+});
