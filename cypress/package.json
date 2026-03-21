@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "npx cypress open"
+    "cypress:open": "npx cypress open",
+    "cy:local": "npx cypress open --config baseUrl=http://localhost:4200",
+    "cy:ilikeemail": "npx cypress open --config baseUrl=https://ilikeemail.com/say-hello",
+    "cy:github": "npx cypress open --config baseUrl=https://martytheparty.github.io/say-hello"
   },
   "keywords": [],
   "author": "",
