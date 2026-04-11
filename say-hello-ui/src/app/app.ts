@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+
+import { ShRoutingService } from './services/sh-routing.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,6 @@ import { RouterOutlet } from '@angular/router';
 export class App {
 // Known false positive in coverage reporting (at time of writing).
   protected readonly title = 'Say Hello';
+  shRoutingService: ShRoutingService = inject(ShRoutingService);
 
 }

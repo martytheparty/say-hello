@@ -12,7 +12,8 @@
     "gh-cli": "npm install -D angular-cli-ghpages",
     "build-github": "ng build -c github",
     "deploy-github": "ng build -c github && npx angular-cli-ghpages --dir=dist/say-hello-ui/browser --branch=gh-pages",
-    "install-material": "ng add @angular/material"
+    "install-material": "ng add @angular/material",
+    "shRoutingService": "ng g s services/shRouting.service"
   },
   "prettier": {
     "printWidth": 100,
