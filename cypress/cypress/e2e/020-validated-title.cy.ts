@@ -1,7 +1,7 @@
 describe('template spec', () => {
   it('passes', () => {
     cy.visit('/');
-    cy.contains('Say Hello Coming Soon...')
+    cy.contains('Welcome To The Say Hello Project')
   .should('be.visible')
   })
 })
