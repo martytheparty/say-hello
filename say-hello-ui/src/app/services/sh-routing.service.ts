@@ -7,7 +7,6 @@ import { filter } from 'rxjs';
 })
 export class ShRoutingService {
   private router = inject(Router);
-  locale: WritableSignal<string> = signal<string>("");
   language: WritableSignal<string> = signal<string>("");
   region: WritableSignal<string> = signal<string>("");
 
@@ -22,9 +21,6 @@ export class ShRoutingService {
   processLocaleParams(params: string): boolean {
     // params is like this "/en/us"
     const locale = params.replace("/","").replace("/",'-');
-    // publish locale
-    this.locale.set(locale);
-    // locale is like this "en-us"
     const language = locale.split('-')[0];
     this.language.set(language);
     // language is like this en

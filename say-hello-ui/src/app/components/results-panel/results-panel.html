@@ -1,0 +1,80 @@
+<table>
+    <tr>
+        <th>Status</th>
+        <th>Listening For</th>
+    </tr>
+    <tr>
+        <td>
+            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === 'hello') {
+                <mat-icon class="success">thumb_up</mat-icon>
+            } @else if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
+                <mat-icon class="ready">record_voice_over</mat-icon>
+            } @else {
+                <mat-icon class="warn">thumb_down</mat-icon>
+            }
+        </td>
+        <td>
+            hello
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === 'hi') {
+                <mat-icon class="success">thumb_up</mat-icon>
+            } @else if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
+                <mat-icon class="ready">record_voice_over</mat-icon>
+            } @else {
+                 <mat-icon class="warn">thumb_down</mat-icon>
+            }
+        </td>
+        <td>
+            hi
+        </td>
+    </tr>
+        <tr>
+        <td>
+            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === 'hey') {
+                <mat-icon class="success">thumb_up</mat-icon>
+            } @else if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
+                <mat-icon class="ready">record_voice_over</mat-icon>
+            } @else {
+                <mat-icon class="warn">thumb_down</mat-icon>
+            }
+        </td>
+        <td>
+            hey
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === helloText) {
+                <mat-icon class="success">thumb_up</mat-icon>
+            } @else if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
+                <mat-icon class="ready">record_voice_over</mat-icon>
+            } @else {
+                <mat-icon class="warn">thumb_down</mat-icon>
+            }
+        </td>
+        <td>
+            <input 
+                (keyup)="updateMatch($event)"
+                type="text"
+                [value]="helloText"
+            >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <mat-icon class="ready">record_voice_over</mat-icon>
+        </td>
+        <td>
+            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
+                 status: Listening for results
+            } @else {
+                results: <strong>"{{ shVoiceService.voiceRecognitionResultSignal() }}"</strong>
+            }
+        </td>
+    </tr>
+</table>
+
+

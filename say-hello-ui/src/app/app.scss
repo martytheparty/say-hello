@@ -1,0 +1,17 @@
+.app-wrapper {
+    padding: 5px;
+
+    app-results-panel, app-results-panel {
+        display: block;
+    }
+
+    .content {
+        display: flex;
+    }
+
+    table {
+        align-self: flex-start;
+        border: 1px solid gray
+    }
+
+}

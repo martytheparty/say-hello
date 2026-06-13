@@ -13,7 +13,11 @@
     "build-github": "ng build -c github",
     "deploy-github": "ng build -c github && npx angular-cli-ghpages --dir=dist/say-hello-ui/browser --branch=gh-pages",
     "install-material": "ng add @angular/material",
-    "shRoutingService": "ng g s services/shRouting.service"
+    "shRoutingService": "ng g s services/shRouting.service",
+    "shVoiceService": "ng g s services/shVoice.service",
+    "vsEnums": "ng g i enums/voiceRecognition.enums",
+    "execComponent": "ng g c components/execution-panel",
+    "resultsComponent": "ng g c components/results-panel"
   },
   "prettier": {
     "printWidth": 100,
