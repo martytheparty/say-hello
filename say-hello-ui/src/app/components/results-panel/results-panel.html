@@ -5,13 +5,7 @@
     </tr>
     <tr>
         <td>
-            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === 'hello') {
-                <mat-icon class="success">thumb_up</mat-icon>
-            } @else if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
-                <mat-icon class="ready">record_voice_over</mat-icon>
-            } @else {
-                <mat-icon class="warn">thumb_down</mat-icon>
-            }
+            <app-results-status [status]="getStatus('hello')"></app-results-status>
         </td>
         <td>
             hello
@@ -19,13 +13,7 @@
     </tr>
     <tr>
         <td>
-            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === 'hi') {
-                <mat-icon class="success">thumb_up</mat-icon>
-            } @else if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
-                <mat-icon class="ready">record_voice_over</mat-icon>
-            } @else {
-                 <mat-icon class="warn">thumb_down</mat-icon>
-            }
+            <app-results-status [status]="getStatus('hi')"></app-results-status>
         </td>
         <td>
             hi
@@ -33,13 +21,7 @@
     </tr>
         <tr>
         <td>
-            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === 'hey') {
-                <mat-icon class="success">thumb_up</mat-icon>
-            } @else if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
-                <mat-icon class="ready">record_voice_over</mat-icon>
-            } @else {
-                <mat-icon class="warn">thumb_down</mat-icon>
-            }
+            <app-results-status [status]="getStatus('hey')"></app-results-status>
         </td>
         <td>
             hey
@@ -47,14 +29,7 @@
     </tr>
     <tr>
         <td>
-            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === helloText) {
-                <mat-icon class="success">thumb_up</mat-icon>
-            } @else if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
-                <mat-icon class="ready">record_voice_over</mat-icon>
-            } @else {
-                <mat-icon class="warn">thumb_down</mat-icon>
-            }
-        </td>
+            <app-results-status [status]="getStatus(helloText)"></app-results-status>        </td>
         <td>
             <input 
                 (keyup)="updateMatch($event)"

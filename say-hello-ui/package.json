@@ -17,7 +17,8 @@
     "shVoiceService": "ng g s services/shVoice.service",
     "vsEnums": "ng g i enums/voiceRecognition.enums",
     "execComponent": "ng g c components/execution-panel",
-    "resultsComponent": "ng g c components/results-panel"
+    "resultsComponent": "ng g c components/results-panel",
+    "statusComponent": "ng g c components/results-panel/results-status"
   },
   "prettier": {
     "printWidth": 100,
