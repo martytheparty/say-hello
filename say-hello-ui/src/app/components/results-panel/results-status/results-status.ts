@@ -1,7 +1,8 @@
-import { 
+import {
   input,
   Component,
-  InputSignal
+  InputSignal,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -11,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule
   ],
   templateUrl: './results-status.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './results-status.scss',
 })
 export class ResultsStatus {

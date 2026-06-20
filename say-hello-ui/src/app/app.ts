@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { ShRoutingService } from './services/sh-routing.service';
 import { ShVoiceService } from './services/sh-voice.service';
@@ -9,6 +9,7 @@ import { ResultsPanel } from './components/results-panel/results-panel';
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ 
     ExecutionPanel,
     ResultsPanel

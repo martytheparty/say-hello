@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ShVoiceService } from '../../services/sh-voice.service';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule
   ],
   templateUrl: './execution-panel.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './execution-panel.scss',
 })
 export class ExecutionPanel {
