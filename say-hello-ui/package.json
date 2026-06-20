@@ -18,7 +18,8 @@
     "vsEnums": "ng g i enums/voiceRecognition.enums",
     "execComponent": "ng g c components/execution-panel",
     "resultsComponent": "ng g c components/results-panel",
-    "statusComponent": "ng g c components/results-panel/results-status"
+    "statusComponent": "ng g c components/results-panel/results-status",
+    "ng-22-ug": "ng update @angular/core@22 @angular/cli@22"
   },
   "prettier": {
     "printWidth": 100,
