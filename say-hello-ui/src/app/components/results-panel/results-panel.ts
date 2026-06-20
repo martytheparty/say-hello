@@ -1,6 +1,7 @@
 import {
   inject,
-  Component
+  Component,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { ShVoiceService } from '../../services/sh-voice.service';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,6 +14,7 @@ import { ResultsStatus } from './results-status/results-status';
     ResultsStatus
   ],
   templateUrl: './results-panel.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './results-panel.scss',
 })
 export class ResultsPanel {
