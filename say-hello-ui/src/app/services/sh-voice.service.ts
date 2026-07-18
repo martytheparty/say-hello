@@ -1,8 +1,8 @@
 import {
   computed,
   effect,
-  Injectable,
   inject,
+  Service,
   signal,
   WritableSignal
 } from '@angular/core';
@@ -18,9 +18,7 @@ declare var webkitSpeechRecognition: any;
 declare var SpeechRecognition: any;
 
 
-@Injectable({
-  providedIn: 'root',
-})
+@Service()
 export class ShVoiceService {
   private recognition: any;
   recognitionOn = false;

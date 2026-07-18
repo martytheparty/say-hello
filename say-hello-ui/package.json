@@ -20,7 +20,9 @@
     "resultsComponent": "ng g c components/results-panel",
     "statusComponent": "ng g c components/results-panel/results-status",
     "ng-22-ug": "ng update @angular/core@22 @angular/cli@22",
-    "ng-22m-ug": "ng update @angular/material@22"
+    "ng-22m-ug": "ng update @angular/material@22",
+    "shVoiceInterfaces": "ng g i interfaces/voiceRecognition.interfaces",
+    "shDataService": "ng g s services/shData.service"
   },
   "prettier": {
     "printWidth": 100,
@@ -53,6 +55,7 @@
     "@angular/build": "^22.0.3",
     "@angular/cli": "^22.0.3",
     "@angular/compiler-cli": "^22.0.2",
+    "angular-cli-ghpages": "^3.1.0",
     "jsdom": "^27.1.0",
     "typescript": "~6.0.3",
     "vitest": "^4.0.8"

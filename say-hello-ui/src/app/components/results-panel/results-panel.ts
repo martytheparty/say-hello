@@ -6,6 +6,7 @@ import {
 import { ShVoiceService } from '../../services/sh-voice.service';
 import { MatIconModule } from '@angular/material/icon';
 import { ResultsStatus } from './results-status/results-status';
+import { ShDataService } from '../../services/sh-data.service';
 
 @Component({
   selector: 'app-results-panel',
@@ -19,7 +20,9 @@ import { ResultsStatus } from './results-status/results-status';
 })
 export class ResultsPanel {
   shVoiceService: ShVoiceService = inject(ShVoiceService);
-  helloText = 'hello';
+  shDataService: ShDataService = inject(ShDataService);
+  helloText = '';
+
 
   updateMatch(event: KeyboardEvent) {
     const input: HTMLInputElement = event.target as HTMLInputElement;
@@ -31,10 +34,17 @@ export class ResultsPanel {
     
     if(this.shVoiceService.normalizedVoiceRecognitionResultSignal() === ""){
       status = "ready";
-    } else if (this.shVoiceService.normalizedVoiceRecognitionResultSignal() === word) {
+    } else if (this.shVoiceService.normalizedVoiceRecognitionResultSignal() === word.toLowerCase()) {
       status = "success";
     }
 
     return status;
   }
+}
+
+
+interface MatchOption {
+  status: "success" | "ready" | "fail";
+  value: string;
+  result: string;
 }
