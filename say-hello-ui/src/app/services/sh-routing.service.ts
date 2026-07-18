@@ -1,10 +1,13 @@
-import { Injectable, inject, WritableSignal, signal } from '@angular/core';
+import { 
+  inject,
+  Service,
+  signal,
+  WritableSignal,
+} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Service()
 export class ShRoutingService {
   private router = inject(Router);
   language: WritableSignal<string> = signal<string>("");

@@ -3,38 +3,26 @@
         <th>Status</th>
         <th>Listening For</th>
     </tr>
-    <tr>
-        <td>
-            <app-results-status [status]="getStatus('hello')"></app-results-status>
-        </td>
-        <td>
-            hello
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <app-results-status [status]="getStatus('hi')"></app-results-status>
-        </td>
-        <td>
-            hi
-        </td>
-    </tr>
+
+    @for (word of this.shDataService.words(); track word) {
         <tr>
-        <td>
-            <app-results-status [status]="getStatus('hey')"></app-results-status>
-        </td>
-        <td>
-            hey
-        </td>
-    </tr>
+            <td>
+                <app-results-status [status]="getStatus(word)"></app-results-status>
+            </td>
+            <td>{{ word }}</td>
+        </tr>
+    }
     <tr>
         <td>
-            <app-results-status [status]="getStatus(helloText)"></app-results-status>        </td>
+            @if(helloText !== '') {
+                <app-results-status [status]="getStatus(helloText)"></app-results-status>        
+            }
+        </td>
         <td>
             <input 
                 (keyup)="updateMatch($event)"
+                placeholder="custom 'Listening For' word"
                 type="text"
-                [value]="helloText"
             >
         </td>
     </tr>
