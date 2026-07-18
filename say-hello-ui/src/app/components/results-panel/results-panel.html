@@ -1,0 +1,43 @@
+<table>
+    <tr>
+        <th>Status</th>
+        <th>Listening For</th>
+    </tr>
+
+    @for (word of this.shDataService.words(); track word) {
+        <tr>
+            <td>
+                <app-results-status [status]="getStatus(word)"></app-results-status>
+            </td>
+            <td>{{ word }}</td>
+        </tr>
+    }
+    <tr>
+        <td>
+            @if(helloText !== '') {
+                <app-results-status [status]="getStatus(helloText)"></app-results-status>        
+            }
+        </td>
+        <td>
+            <input 
+                (keyup)="updateMatch($event)"
+                placeholder="custom 'Listening For' word"
+                type="text"
+            >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <mat-icon class="ready">record_voice_over</mat-icon>
+        </td>
+        <td>
+            @if(shVoiceService.normalizedVoiceRecognitionResultSignal() === '') {
+                 status: Listening for results
+            } @else {
+                results: <strong>"{{ shVoiceService.voiceRecognitionResultSignal() }}"</strong>
+            }
+        </td>
+    </tr>
+</table>
+
+

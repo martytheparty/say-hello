@@ -1,0 +1,9 @@
+<mat-icon [class]="status()">
+@if(status() === 'success') {
+    thumb_up
+} @else if(status() === 'ready') {
+    record_voice_over
+} @else {
+    thumb_down
+}
+</mat-icon>

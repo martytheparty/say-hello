@@ -1,9 +1,12 @@
-<div>
+<div class="app-wrapper">
     <h1>Welcome To The Say Hello Project</h1>
-    <table>
-        <tr><td>Locale</td><td>{{shRoutingService.locale()}}</td></tr>
-        <tr><td>Language</td><td>{{shRoutingService.language()}}</td></tr>
-        <tr><td>Region</td><td>{{shRoutingService.region()}}</td></tr>
-    </table>
-
+    <div class="content">
+        <app-results-panel></app-results-panel>
+        <table>
+            <tr><td>Locale</td><td>{{shVoiceService.locale()}}</td></tr>
+            <tr><td>Language</td><td>{{shRoutingService.language()}}</td></tr>
+            <tr><td>Region</td><td>{{shRoutingService.region()}}</td></tr>
+        </table>
+    </div>
+    <app-execution-panel></app-execution-panel>
 </div>
