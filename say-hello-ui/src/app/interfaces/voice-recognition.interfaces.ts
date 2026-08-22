@@ -6,3 +6,7 @@ export interface WordOptions {
     word: string;
     description: string;
 }
+
+export interface ApiWord {
+    word: string;
+}

@@ -1,7 +1,16 @@
 <div class="app-wrapper">
     <h1>Welcome To The Say Hello Project</h1>
+    @if(!shDataService.configured()) {
+        <div class="not-configured-text">
+            The locale <strong>{{shVoiceService.locale()}}</strong> has not been configured, so there are no words available for comparison. You can still enter your own word or phrase to test with the Voice API.
+        </div>
+    }
     <div class="content">
-        <app-results-panel></app-results-panel>
+        @if(shDataService.loading()) {
+            <app-loader></app-loader>
+        } @else {
+            <app-results-panel></app-results-panel>
+        }
         <table>
             <tr><td>Locale</td><td>{{shVoiceService.locale()}}</td></tr>
             <tr><td>Language</td><td>{{shRoutingService.language()}}</td></tr>
