@@ -19,5 +19,13 @@
         border: 1px dashed darkblue;
         padding: 3px;
     }
+    .nav {
+        display: flex;
+        margin: 6px;
+
+        table {
+            margin: 0 3px;
+        }
+    }
 
 }

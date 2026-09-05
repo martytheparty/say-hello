@@ -1,6 +1,22 @@
 [
-    { "word": "hello"},
-    { "word": "hi"},
-    { "word": "hey"},
-    { "word": "greetings"}
+    {
+    "word": "hello",
+    "description": "A common, neutral greeting used in the USA that is appropriate in both casual and formal settings. It can also be used to check whether someone is present, listening, or available, such as when entering an empty room and calling out, “Hello?”"
+    },
+    { 
+        "word": "hi",
+        "description": "A common, friendly, and informal greeting used in the USA, especially in casual conversations and everyday interactions. It is generally appropriate in most settings, but is less formal than “hello.”"
+    },
+    { 
+        "word": "hey",
+        "description": "A common, friendly, and informal greeting used in the USA. It is especially common among friends, family, and people who are familiar with one another, and generally conveys a more casual and relaxed tone than “hello” or “hi.”"
+    },
+    { 
+        "word": "greetings",
+        "description": "A somewhat formal or old-fashioned greeting used in the USA, often intended to convey friendliness or goodwill. It is less common in everyday conversation than “hello,” “hi,” or “hey,” and is more likely to appear in writing, announcements, humorous speech, or deliberately formal situations."
+    },
+    {
+        "word": "howdy partner",
+        "description": "A friendly, informal greeting associated with the American West and cowboy culture. It conveys a warm, familiar, and somewhat playful tone, and is commonly used as a stereotypical Western-style greeting rather than as a formal expression."
+    }
 ]

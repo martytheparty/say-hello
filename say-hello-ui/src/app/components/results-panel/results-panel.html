@@ -1,15 +1,17 @@
 <table>
     <tr>
         <th>Status</th>
-        <th>Listening For</th>
+        <th>Matching</th>
+        <th>&nbsp;</th>
     </tr>
 
     @for (word of this.shDataService.words(); track word) {
         <tr>
             <td>
-                <app-results-status [status]="getStatus(word)"></app-results-status>
+                <app-results-status [status]="getStatus(word.word)"></app-results-status>
             </td>
-            <td>{{ word }}</td>
+            <td>{{ word.word }}</td>
+            <td>{{ word.description }}</td>
         </tr>
     }
     <tr>

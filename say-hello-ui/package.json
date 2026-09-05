@@ -23,7 +23,8 @@
     "ng-22m-ug": "ng update @angular/material@22",
     "shVoiceInterfaces": "ng g i interfaces/voiceRecognition.interfaces",
     "shDataService": "ng g s services/shData.service",
-    "loadingComponent": "ng g c components/loader/loader"
+    "loadingComponent": "ng g c components/loader/loader",
+    "localeNav": "ng g c components/local-nav-component"
   },
   "prettier": {
     "printWidth": 100,
