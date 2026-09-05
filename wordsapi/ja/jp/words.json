@@ -1,0 +1,14 @@
+[
+    { 
+        "word": "こんにちは",
+        "description": "A common and polite greeting in Japan, typically used during the daytime when meeting or speaking with someone. It is appropriate in most everyday and semi-formal situations, though more formal settings may call for a more respectful greeting." 
+    },
+    {
+        "word": "やあ",
+        "description": "Hi / Hey — casual, somewhat masculine or old-fashioned depending on context"
+    },
+    {
+        "word": "もしもし",
+        "description": "Hello? — specifically when answering or initiating a phone call"
+    }
+]

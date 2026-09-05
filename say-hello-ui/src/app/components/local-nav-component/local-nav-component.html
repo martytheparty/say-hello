@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Locale</mat-label>
+  <mat-select (selectionChange)="changeLocale($event)">
+    @for (locale of this.shDataService.locales(); track locale) {
+      <mat-option [value]="locale">{{locale.name}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>

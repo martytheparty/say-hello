@@ -4,8 +4,11 @@ import { ShRoutingService } from './services/sh-routing.service';
 import { ShVoiceService } from './services/sh-voice.service';
 import { ExecutionPanel } from './components/execution-panel/execution-panel';
 import { ResultsPanel } from './components/results-panel/results-panel';
-import { WordOptions } from './interfaces/voice-recognition.interfaces';
+import { ApiLocale, WordOptions } from './interfaces/voice-recognition.interfaces';
 import { VoiceStateEnum } from './enums/voice-recognition.enums';
+import { ShDataService } from './services/sh-data.service';
+import { LoaderComponent } from './components/loader/loader/loader';
+import { LocalNavComponent } from './components/local-nav-component/local-nav-component';
 
 @Component({
   selector: 'app-root',
@@ -14,37 +17,20 @@ import { VoiceStateEnum } from './enums/voice-recognition.enums';
   changeDetection: ChangeDetectionStrategy.Eager,
   imports: [ 
     ExecutionPanel,
-    ResultsPanel
+    ResultsPanel,
+    LoaderComponent,
+    LocalNavComponent
   ]
 })
 export class App {
   shRoutingService: ShRoutingService = inject(ShRoutingService);
   shVoiceService: ShVoiceService = inject(ShVoiceService);
+  shDataService: ShDataService = inject(ShDataService);
 
   wordOptions: WordOptions[] = [];
+  locales: ApiLocale[] = [];
 
   constructor() {
-    this.addWord(
-      this.wordOptions.length,
-      VoiceStateEnum.Off,
-      "hello",
-      "A generally formal greeting the is very common to use throughout the US"
-    );
-
-    this.addWord(
-      this.wordOptions.length,
-      VoiceStateEnum.Off,
-      "hi",
-      "A generally informal greeting the is very common to use throughout the US"
-    )
-
-    this.addWord(
-      this.wordOptions.length,
-      VoiceStateEnum.Off,
-      "hey",
-      "A generally informal greeting the is very common to use throughout the US particulary when you want to get someone's attention."
-    )
-
   }
 
   addWord(

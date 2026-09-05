@@ -6,3 +6,14 @@ export interface WordOptions {
     word: string;
     description: string;
 }
+
+export interface ApiWord {
+    word: string;
+    description: string;
+}
+
+export interface ApiLocale {
+    name: string;
+    region: string;
+    language: string;
+}

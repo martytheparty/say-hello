@@ -6,6 +6,7 @@ import {
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { ApiLocale } from '../interfaces/voice-recognition.interfaces';
 
 @Service()
 export class ShRoutingService {
@@ -32,5 +33,9 @@ export class ShRoutingService {
 
 
     return true;
+  }
+
+  setRouteForLocaleChange(apiLocale: ApiLocale): void {
+    this.router.navigateByUrl("/"+apiLocale.language+"/"+apiLocale.region);
   }
 }

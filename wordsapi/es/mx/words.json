@@ -1,0 +1,22 @@
+[
+    {
+        "word": "hola",
+        "description": "The most common and versatile greeting in Spanish. It is friendly and neutral, and can be used in both casual and formal situations when meeting or addressing someone."
+    },
+    {
+        "word": "buenos días",
+        "description": "A polite Spanish greeting meaning “good morning.” It is commonly used during the morning and is appropriate in both casual and formal situations."
+    },
+    {
+        "word": "buenas tardes",
+        "description": "A polite Spanish greeting meaning “good afternoon” or “good evening.” It is generally used from the afternoon into the early evening and works in both casual and formal situations."
+    },
+    {
+        "word": "buenas noches",
+        "description": "A Spanish greeting meaning “good evening” or “good night.” It is used in the evening and at night, both when meeting someone and when saying goodbye."
+    },
+    {
+        "word": "qué tal",
+        "description": "A friendly and informal Spanish greeting that literally asks “how are things?” It is commonly used simply as a greeting and usually does not require a detailed answer."
+    }
+]
